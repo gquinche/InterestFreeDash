@@ -4,7 +4,7 @@ st.set_page_config(page_title="Simulador de Cuotas Sin Interés", layout="center
 
 # --- Comercio preset ---
 stores = {
-    "Ningún comercio": {"price": 1_000_000, "months": list(range(1,36)),"min_allowed_price" : 1},
+    "Ningún comercio": {"price": 1_000_000, "months": None,"min_allowed_price" : 1},
     "📱 Samsung": {"price": 3_000_000, "months": [3, 6, 12],"min_allowed_price" : 1},
     "🛒 Mercado Libre": {"price": 1_200_000, "months": [2, 3, 6, 12],"min_allowed_price" : 1},
     "🎧 JBL": {"price": 500_000, "months": [3, 6, 12],"min_allowed_price" : 100_000},
@@ -41,7 +41,11 @@ if selected_store:
 st.subheader("Parámetros de la compra")
 
 P = st.number_input("💰 Precio del producto (P)", min_value=0, value=st.session_state.get("preset_price", 1000000))
-n_months = st.number_input("📆 Meses para pagar", min_value=1, value=st.session_state.get("preset_months", 12))
+# n_months = st.number_input("📆 Meses para pagar", min_value=1, value=st.session_state.get("preset_months", 12))
+if stores[selected_store]["months"] is None:
+    n_months = st.number_input("📆 Meses para pagar", min_value=stores[selected_store]["min_allowed_price"], value=st.session_state.get("preset_months", stores[selected_store]["months"][-1]), step=1)
+else:
+    n_months = st.selectbox("📆 Meses para pagar", stores[selected_store]["months"], index=stores[selected_store]["months"].index(st.session_state.get("preset_months", stores[selected_store]["months"][-1])))
 payment_interval_days = st.number_input("🕒 Días entre pagos", min_value=1, value=30)
 
 rate_type = st.selectbox("📈 Tipo de tasa de interés", ["Anual", "Mensual", "Diaria"])
