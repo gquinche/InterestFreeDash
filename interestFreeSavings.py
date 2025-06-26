@@ -18,14 +18,14 @@ st.title("💸 Simulador de Ahorro en Cuotas Sin Interés")
 resumen_pagina = """
 ### 💡 ¿Realmente te convienen las cuotas sin interés?
 
-Cuando compras algo a cuotas, **normalmente pagas más** por intereses ocultos.  
+Cuando compras algo a cuotas, **normalmente pagas más** por intereses.  
 Pero algunos comercios ofrecen **cuotas verdaderamente sin interés**. ¿Es una buena oportunidad?
 
 ✅ **Sí, incluso si ya tienes el dinero.**  
-Al pagar en cuotas, conservás tu plata y podés **invertirla o usarla para otras cosas**.
+Al pagar en cuotas, conservas tu plata y puedes **invertirla o usarla para otras cosas**.
 
-Este simulador asume que ese dinero lo invertís mes a mes en una cuenta que te da rendimiento, como **Nu** o **RappiPay**.  
-Te muestra **cuánto terminás ganando al usar cuotas sin interés inteligentemente**.
+Este simulador asume que ese dinero lo inviertes mes a mes en una cuenta que te da rendimiento, como **Nu** o **RappiPay**.  
+Te muestra **cuánto terminas ganando al usar cuotas sin interés inteligentemente**.
 """
 
 st.markdown(resumen_pagina)
@@ -80,7 +80,6 @@ st.markdown("""
 
 Esta estrategia **puede ayudarte a ahorrar**, pero sólo si evitas mezclar **compras con interés y sin interés**.  
 
-En algunas tarjetas, como las de comercios internacionales, las compras pueden diferirse automáticamente a cuotas **con interés**, lo cual **anula los beneficios** de mantener tu liquidez invertida.
+En algunas compras, como las de comercios internacionales, las compras pueden diferirse automáticamente a cuotas **con interés**, lo cual **anula los beneficios** de mantener tu liquidez invertida.
 
-💡 Verificá siempre las condiciones de diferido de cada compra. Algunas entidades permiten modificar las cuotas **antes del primer pago**, lo cual es clave si estás usando esta estrategia.
-""")
+💡 Verifica siempre las condiciones de diferido de cada compra. Algunas entidades permiten modificar las cuotas **antes del primer corte**, lo cual es clave si estás usando esta estrategia.""")
