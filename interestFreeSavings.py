@@ -4,7 +4,7 @@ st.set_page_config(page_title="Simulador de Cuotas Sin Interés", layout="center
 
 # --- Comercio preset ---
 stores = {
-    "Ningún comercio": {"price": 1_000_000, "months": None,"min_allowed_price" : 1},
+    "Ningún comercio": {"price": 1_000_000, "months": [12],"min_allowed_price" : 1},
     "📱 Samsung": {"price": 3_000_000, "months": [3, 6, 12],"min_allowed_price" : 1},
     "🛒 Mercado Libre": {"price": 1_200_000, "months": [2, 3, 6, 12],"min_allowed_price" : 1},
     "🎧 JBL": {"price": 500_000, "months": [3, 6, 12],"min_allowed_price" : 100_000},
